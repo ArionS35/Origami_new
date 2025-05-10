@@ -1,0 +1,231 @@
+/* The menu container */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to bottom,rgb(0, 0, 0,0.9), rgba(0, 0, 0, 0.1)),url("main2.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 15px;
+    font-family: sans-serif;
+    color: white; /* Text color for the subtext links */
+    position: relative;
+    height: 15vh; /* Set the container height */
+  }
+  
+  /* Gradient text effect */
+  .gradient-text {
+    font-size: 70px; /* Text size for the main title */
+    font-weight: bold;
+    padding-left: 250px;
+    background: linear-gradient(90deg, red, blue, green); /* Gradient colors */
+    background-size: 200% 100%; /* Makes the gradient larger than the text */
+    color: transparent; /* Make the text transparent to show the gradient */
+    background-clip: text; /* Clips the gradient to the text */
+    -webkit-background-clip: text; /* Needed for Safari */
+    animation: gradientAnimation 2s infinite alternate; /* Animation to move the gradient */
+  }
+  
+  /* Animation for the gradient text movement */
+  @keyframes gradientAnimation {
+    0% {
+      background-position: -230% 0; /* Start from the left */
+    }
+    50% {
+      background-position: -165% 0;
+    }
+    100% {
+      background-position: -100% 0; /* End at the right, then reverse */
+    }
+  }
+  
+  /* Styling for the paragraph (subtext) */
+  .menu p {
+    padding-top: 50px;
+    font-size: 25px;
+    margin: 0;
+  }
+  
+  .menu p a {
+    color: rgb(0, 98, 255); /* Color for the subtext link */
+    text-decoration: none;
+  }
+  
+  .menu p a:hover {
+    color: rgb(0, 170, 255);
+    text-decoration: underline; /* Underline effect when hovered */
+  }
+  
+body{
+    margin: 0px;
+    font-size: 30px;
+    background-image: linear-gradient(to bottom,rgb(0, 0, 0,0.5), rgba(0, 0, 0, 0.7)),url("origami_bg.jpg");
+    background-size: cover;
+    
+}
+
+.bodyimg .p1 {
+  padding-left: 50px;
+  font-size: 40px;
+  padding-top: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.bodyimg .p2 {
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 25px;
+  color: rgba(245, 245, 245, 0.8);
+  margin: 0;
+}
+
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px;
+    font-family: sans-serif;
+    
+}
+.grid img{
+    border: 2px solid #000000;
+    border-radius: 50px;
+    border: 5px solid whitesmoke;
+    box-shadow: 0 0 15px white;
+    background-color: rgb(0, 0, 0,0.3);
+    z-index: 0;
+}
+.origami {
+    border-radius: 20px;
+    background: linear-gradient(to bottom,rgb(0, 0, 0,0.3), rgba(0, 0, 0, 0.5));
+    padding: 30px;
+    margin: 15px;
+    width: 300px;
+    height: 570px;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+}
+.origami:hover{
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+.origami:hover .grid img {
+  clip-path: inset(0 0 0 0);
+}
+
+.footer {
+    height: 100px;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-top: 5px;
+    background-image: linear-gradient(to bottom,rgb(0, 0, 0,0.9), rgba(0, 0, 0, 0.1)),url("main2.jpg");
+    background-size: cover;
+    color: bisque;
+}
+
+.footer br {
+  display: block;
+  margin-top: 20px; /* Adds space between the lines */
+}
+
+.spaced-line {
+  display: inline-block; /* Keeps "you" inline but still allows spacing */
+  margin-left: 58px; /* Adds space before "you" to align vertically with "thank" */
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -350px; /* Initially hide the sidebar off-screen */
+  width: 310px; /* Set the desired width of the sidebar */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 20px;
+  transition: left 0.3s ease; /* Smooth transition for sliding */
+  z-index: 1000;
+}
+
+/* When the sidebar is open */
+.sidebar.open {
+  left: 0; /* Move sidebar into view */
+}
+
+
+/* Back Button */
+.close-btn {
+  background-color: #ff6f61;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  padding: 5px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.close-btn:hover {
+  background-color: rgb(255, 57, 57,0.7);
+}
+
+/* Search box */
+#search-box{
+  height: 25px;
+  width: 220px;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+/* Search Results */
+#search-results-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#search-results-list li {
+  cursor: pointer;
+  padding: 5px;
+  border-bottom: 1px solid #fff;
+}
+
+#search-results-list li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Highlight */
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+  color: black;
+}
+
+/* Grid Styles */
+.grid .origami h3 {
+  outline: none;  /* To prevent any default focus outline */
+}
+
+.grid .origami:focus-within {
+  border: 3px solid #ff0;  /* Example: Add a yellow border to emphasize focus */
+}
+
+/* Open Button */
+.open-btn {
+  background: none;           /* Remove background */
+  border: none;               /* Remove any borders */
+  color: inherit;             /* Inherit color from parent */
+  text-decoration: none;      /* Remove the underline */
+  outline: none;              /* Remove the focus outline */
+  font-size: 30px;            /* Adjust the font size as needed */
+  cursor: pointer;           /* Make it look like a clickable button */
+}
+
+/* Optional: You can style it to have a custom color when hovered */
+.open-btn:hover {
+  color: #333;                /* Change color on hover */
+}
